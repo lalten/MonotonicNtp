@@ -2,9 +2,9 @@
 #include <Arduino.h>
 #include <ESP8266WiFi.h>
 
-bool MonotonicNtp::begin(uint32_t update_period_ms,
+bool MonotonicNtp::begin(uint64_t update_period_us,
                          const char *ntp_server_name) {
-  setUpdatePeriod(update_period_ms);
+  setUpdatePeriod(update_period_us);
   setNtpServer(ntp_server_name);
 
   Udp.begin(NTP_PORT);

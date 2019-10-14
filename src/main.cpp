@@ -23,8 +23,8 @@ void setup() {
 
   wifimanager.autoConnect();
 
-  // mntp.begin(12 * 60 * 60 * 1000 * 1000); // 12 hours
-  mntp.begin(60 * 60 * 1000 * 1000);  // 1 hour
+  mntp.begin(12 * 60 * 60 * 1000 * 1000ULL); // 24 hours
+  // mntp.begin(60 * 60 * 1000 * 1000);  // 1 hour
   // mntp.begin(60 * 1000 * 1000); // 1 min
 }
 

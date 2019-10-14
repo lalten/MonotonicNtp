@@ -7,7 +7,7 @@
 class MonotonicNtp {
  public:
   MonotonicNtp(UDP &udp) : Udp(udp) {}
-  bool begin(uint32_t update_period_ms = 12 * 60 * 60 * 1000,
+  bool begin(uint64_t update_period_us = 12 * 60 * 60 * 1000 * 1000ULL,
              const char *ntp_server_name = "pool.ntp.org");
 
   uint64_t now();
